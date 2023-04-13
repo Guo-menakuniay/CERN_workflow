@@ -1,0 +1,1816 @@
+Last login: Fri Mar 17 12:04:17 2023 from 58.249.112.80
+* ********************************************************************
+* Welcome to lxplus717.cern.ch, CentOS Linux release 7.9.2009 (Core)
+* Archive of news is available in /etc/motd-archive
+* Reminder: you have agreed to the CERN
+*   computing rules, in particular OC5. CERN implements
+*   the measures necessary to ensure compliance.
+*   https://cern.ch/ComputingRules
+* Puppet environment: production, Roger state: production
+* Foreman hostgroup: lxplus/nodes/login
+* Availability zone: cern-geneva-c
+* LXPLUS Public Login Service - http://lxplusdoc.web.cern.ch/
+* An AlmaLinux8 based lxplus8.cern.ch is now available
+* An AlmaLinux9 based lxplus9.cern.ch is now available
+* Please read LXPLUS Privacy Notice in http://cern.ch/go/TpV7
+* ********************************************************************
+[mguo@lxplus717 ~]$ cd work/CMSSW_10_6_29/
+[mguo@lxplus717 CMSSW_10_6_29]$ csmenv
+-bash: csmenv: command not found
+[mguo@lxplus717 CMSSW_10_6_29]$ cd src/
+[mguo@lxplus717 src]$ cmsenv
+[mguo@lxplus717 src]$ scram b
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Building CMSSW version CMSSW_10_6_29 ----
+>> Entering Package PhysicsTools/NanoAODTools
+>> Creating project symlinks
+------- copying files from src/PhysicsTools/NanoAODTools/scripts -------
+>> copied keep_and_drop.txt
+>> copied keep_and_drop_output.txt
+>> copied nano_postproc.py
+>> copied haddnano.py
+>> copied keep_and_drop_input.txt
+>> copied nano_report.py
+>> Leaving Package PhysicsTools/NanoAODTools
+>> Package PhysicsTools/NanoAODTools built
+>> Subsystem PhysicsTools built
+>> Subsystem BigProducts built
+gmake[1]: Entering directory '/eos/home-m/mguo/CMSSW_10_6_29'
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Creating project symlinks
+>> Done python_symlink
+>> Compiling python modules cfipython/slc7_amd64_gcc700
+>> Compiling python modules python
+>> Compiling python modules src/PhysicsTools/NanoAODTools/python
+Compiling src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/auto_crab_example/crab_help.py ...
+  File "src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/auto_crab_example/crab_help.py", line 68
+    f.write(f'config.Data.outLFNDirBase ="{outLFNDirBase}' + sample_type + '/' + year + '"\n')
+                                                         ^
+SyntaxError: invalid syntax
+
+gmake[1]: *** [config/SCRAM/GMake/Makefile.rules:1887: CompilePython] Error 1
+gmake[1]: Leaving directory '/eos/home-m/mguo/CMSSW_10_6_29'
+gmake: *** [config/SCRAM/GMake/Makefile.rules:1753: src] Error 2
+gmake: *** [There are compilation/build errors. Please see the detail log above.] Error 2
+[mguo@lxplus717 src]$ cd PhysicsTools/NanoAODTools/python/postprocessing/analysis/
+[mguo@lxplus717 analysis]$ source init.sh           
+Initing
+/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/
+Updating pileup
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_pileup/mcPileupUL2017.root': No such file or directory
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_pileup/PileupHistogram-goldenJSON-13tev-UL2017-99bins_withVar.root': No such file or directory
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_pileup/puWeightProducer.py': No such file or directory
+Updating prefiring correction
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_prefiring/*.root': No such file or directory
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_prefiring/PrefireCorr.py': No such file or directory
+Updateing JME correction
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_jme/*.tgz': No such file or directory
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_jme/jetmetHelperRun2.py': No such file or directory
+Updating BJet related
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_btv/btagSFProducer.py': No such file or directory
+cp: cannot stat '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/for_btv/*.csv': No such file or directory
+Cleaning
+rm: cannot remove '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//analysis/others/': No such file or directory
+rm: cannot remove '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/data/jme/Autumn18_*.tgz': No such file or directory
+rm: cannot remove '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/data/jme/Fall17_*.tgz': No such file or directory
+rm: cannot remove '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/data/jme/Spring16_*.tgz': No such file or directory
+rm: cannot remove '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/data/jme/Summer16_*.tgz': No such file or directory
+rm: cannot remove '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing//data/roccor*': No such file or directory
+redo scram
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Building CMSSW version CMSSW_10_6_29 ----
+>> Entering Package PhysicsTools/NanoAODTools
+>> Creating project symlinks
+------- copying files from src/PhysicsTools/NanoAODTools/scripts -------
+>> copied keep_and_drop.txt
+>> copied keep_and_drop_output.txt
+>> copied nano_postproc.py
+>> copied haddnano.py
+>> copied keep_and_drop_input.txt
+>> copied nano_report.py
+>> Leaving Package PhysicsTools/NanoAODTools
+>> Package PhysicsTools/NanoAODTools built
+>> Subsystem PhysicsTools built
+>> Subsystem BigProducts built
+gmake[1]: Entering directory '/eos/home-m/mguo/CMSSW_10_6_29'
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Creating project symlinks
+>> Done python_symlink
+>> Compiling python modules cfipython/slc7_amd64_gcc700
+>> Compiling python modules python
+>> Compiling python modules src/PhysicsTools/NanoAODTools/python
+Compiling src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/auto_crab_example/crab_help.py ...
+  File "src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/auto_crab_example/crab_help.py", line 68
+    f.write(f'config.Data.outLFNDirBase ="{outLFNDirBase}' + sample_type + '/' + year + '"\n')
+                                                         ^
+SyntaxError: invalid syntax
+
+gmake[1]: *** [config/SCRAM/GMake/Makefile.rules:1887: CompilePython] Error 1
+gmake[1]: Leaving directory '/eos/home-m/mguo/CMSSW_10_6_29'
+gmake: *** [config/SCRAM/GMake/Makefile.rules:1753: src] Error 2
+gmake: *** [There are compilation/build errors. Please see the detail log above.] Error 2
+Initing Done \(ᵔᵕᵔ)/
+[mguo@lxplus717 src]$ cd PhysicsTools/NanoAODTools/
+.git/       crab/       data/       interface/  python/     scripts/    src/        standalone/
+[mguo@lxplus717 src]$ cd PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab
+[mguo@lxplus717 crab]$ rm -rf crab
+crab.log              crab_script.pyc       crab_script_dataB.sh  crab_script_dataE.sh
+crab_DoubleMuon_D/    crab_script.sh        crab_script_dataC.sh  crab_script_dataF.sh
+crab_script.py        crab_script_data.sh   crab_script_dataD.sh  crab_status.sh
+[mguo@lxplus717 crab]$ rm -rf crab_DoubleMuon_D/
+[mguo@lxplus717 crab]$ crab submit -c configs_v8/DoubleEGB_cfg.py
+Will use CRAB configuration file configs_v8/DoubleEGB_cfg.py
+Importing CMSSW configuration PSet.py
+Finished importing CMSSW configuration PSet.py
+Impossible to upload the sandbox tarball.
+Error message: Error: input tarball size 122 MB exceeds maximum allowed limit of 120 MB
+sandbox content sorted by size[Bytes]:
+36208640        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/inputs/4f0eb10b-669b-4e6f-9df7-f4b916ad8d9fdefault.tgz
+35930930        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/pack/pack-425f05f99d167591c57f6b9bca060defdb5be755.pack
+ 8140233        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz
+ 3869385        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_106XUL18SF.csv
+ 3865487        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_106XUL17SF.csv
+ 3773076        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_106XUL18SF.csv
+ 3772086        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_106XUL17SF.csv
+ 3771942        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_106XUL17SF_V2p1.csv
+ 3038502        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_V5_DATA.tgz
+ 2172020        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2018.txt
+ 2172020        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2017.txt
+ 2172020        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2018.txt
+ 2172020        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2017.txt
+ 2161128        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2018UL.txt
+ 2161128        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2017UL.txt
+ 2161128        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2016bUL.txt
+ 2161128        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2016aUL.txt
+ 2161128        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2016.txt
+ 2161128        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2018UL.txt
+ 2161128        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2017UL.txt
+ 2161128        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2016bUL.txt
+ 2161128        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2016aUL.txt
+ 2161128        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR2016.txt
+ 1706585        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V6_MC.tgz
+ 1663107        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V6_DATA.tgz
+ 1662948        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V6_DATA.tgz
+ 1662943        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V6_DATA.tgz
+ 1662928        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V6_DATA.tgz
+ 1662846        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V6_DATA.tgz
+ 1633970        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_102XSF_V1.csv
+ 1626194        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz
+ 1626039        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz
+ 1626016        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz
+ 1626007        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz
+ 1625982        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz
+ 1623007        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz
+ 1594586        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_2016LegacySF_V1.csv
+ 1508546        src/PhysicsTools/NanoAODTools/data/btagSF/DeepFlavour_94XSF_V3_B_F.csv
+ 1504312        src/PhysicsTools/NanoAODTools/data/btagSF/DeepFlavour_94XSF_V2_B_F.csv
+ 1432270        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL16APV_V7_DATA.tgz
+ 1204433        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/tauTriggerEfficiencies2016.root
+ 1204433        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/tauTriggerEfficiencies2016.root
+ 1199827        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/tauTriggerEfficiencies2018.root
+ 1199827        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/tauTriggerEfficiencies2018.root
+ 1196128        lib/slc7_amd64_gcc700/libPhysicsToolsNanoAODTools.so
+  978332        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_102XSF_V1.csv
+  953451        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_94XSF_V4_B_F.csv
+  952175        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_2016LegacySF_V1.csv
+  891937        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/tauTriggerEfficiencies2017.root
+  891937        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/tauTriggerEfficiencies2017.root
+  832969        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_V5_MC.tgz
+  788926        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL16_V7_MC.tgz
+  788412        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL16APV_V7_MC.tgz
+  758562        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_RunD_V5_DATA.tgz
+  758519        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_RunA_V5_DATA.tgz
+  758513        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_RunC_V5_DATA.tgz
+  758486        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_RunB_V5_DATA.tgz
+  716543        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL16_V7_DATA.tgz
+  501075        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab.log
+  501075        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab.log
+  237587        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/Mu_Iso.root
+  237587        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/Mu_Iso.root
+  215993        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/Mu_ID.root
+  215993        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/Mu_ID.root
+  207403        src/PhysicsTools/NanoAODTools/data/btagSF/btagSF_CSVv2_ichep2016.csv
+  177505        src/PhysicsTools/NanoAODTools/data/btagSF/CSVv2_94XSF_V2_B_F.csv
+  165932        src/PhysicsTools/NanoAODTools/data/btagSF/btagSF_cMVAv2_ichep2016.csv
+  163321        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_94XSF_V2_B_F.csv
+  162279        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_94XSF_V1_B_F.csv
+  105534        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/muon_ISO.root
+  105534        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/muon_ISO.root
+  105465        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/muon_ISO.root
+  105465        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/muon_ISO.root
+   81373        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/Mu_Trg.root
+   81373        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/Mu_Trg.root
+   72333        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/index
+   69646        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/FakeLepProducer.py
+   66845        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/muon_ID.root
+   66845        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/muon_ID.root
+   66789        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/muon_ID.root
+   66789        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/muon_ID.root
+   54442        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/TTCProducer.py
+   53730        src/PhysicsTools/NanoAODTools/data/jme/puppiCorr.root
+   53130        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetmetUncertainties.py
+   44621        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/fatJetUncertainties.py
+   38424        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/pack/pack-425f05f99d167591c57f6b9bca060defdb5be755.idx
+   38129        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/FakeLepProducer.pyc
+   35212        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_106XUL17SF_WPonly.csv
+   34957        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_106XUL17SF_WPonly.csv
+   32535        src/PhysicsTools/NanoAODTools/data/btagSF/DeepCSV_106XUL18SF_WPonly.csv
+   32337        src/PhysicsTools/NanoAODTools/data/btagSF/DeepJet_106XUL18SF_WPonly.csv
+   31915        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2016Legacy_EMB.root
+   31915        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2016Legacy_EMB.root
+   31670        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/TTCProducer.pyc
+   30716        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2018ReReco_EMB.root
+   30716        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2018ReReco_EMB.root
+   30691        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2017ReReco_EMB.root
+   30691        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2017ReReco_EMB.root
+   29939        src/PhysicsTools/NanoAODTools/data/btagSF/CSVv2_94XSF_V1_B_F.csv
+   26958        src/PhysicsTools/NanoAODTools/data/jme/Summer20UL16APV_JRV3_MC.tgz
+   26666        src/PhysicsTools/NanoAODTools/data/jme/Summer20UL16_JRV3_MC.tgz
+   26509        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/fatJetUncertainties.pyc
+   26279        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetmetUncertainties.pyc
+   24907        src/PhysicsTools/NanoAODTools/data/jme/puppiSoftdropResol.root
+   24698        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/muonIDISOSFProducer.py
+   24603        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2016_preVFP.root
+   24603        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2016_preVFP.root
+   24555        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2017.root
+   24555        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2017.root
+   24542        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2016_postVFP.root
+   24542        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2016_postVFP.root
+   24522        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2017ReReco.root
+   24522        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2017ReReco.root
+   24521        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2018.root
+   24521        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_UL2018.root
+   24480        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2016Legacy.root
+   24480        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2016Legacy.root
+   24446        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2018ReReco.root
+   24446        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_DeepTau2017v2p1VSjet_2018ReReco.root
+   18987        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_MVAoldDM2017v2_2018ReReco.root
+   18987        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_MVAoldDM2017v2_2018ReReco.root
+   18953        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_MVAoldDM2017v2_2017ReReco.root
+   18953        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_MVAoldDM2017v2_2017ReReco.root
+   18938        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_pt_MVAoldDM2017v2_2016Legacy.root
+   18938        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_pt_MVAoldDM2017v2_2016Legacy.root
+   17907        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_MVA80iso.root
+   17907        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_MVA80iso.root
+   17870        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_MVA80noIso.root
+   17870        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_MVA80noIso.root
+   17857        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_Tight.root
+   17857        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_Tight.root
+   17766        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_Medium.root
+   17766        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_Medium.root
+   17718        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_MVA90iso.root
+   17718        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_MVA90iso.root
+   17709        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_MVA90noIso.root
+   17709        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_MVA90noIso.root
+   17681        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_Medium.root
+   17681        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_Medium.root
+   17655        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_Loose.root
+   17655        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_Loose.root
+   17651        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_Veto.root
+   17651        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_Veto.root
+   17642        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_MVA80noIso.root
+   17642        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_MVA80noIso.root
+   17628        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_Loose.root
+   17628        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_Loose.root
+   17601        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_Tight.root
+   17601        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_Tight.root
+   17592        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/ele_Veto.root
+   17592        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/ele_Veto.root
+   17544        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_MVA90iso.root
+   17544        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_MVA90iso.root
+   17540        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_MVA80iso.root
+   17540        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_MVA80iso.root
+   17519        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/ele_MVA90noIso.root
+   17519        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/ele_MVA90noIso.root
+   15954        python/PhysicsTools/NanoAODTools/postprocessing/modules/btv/btagSFProducer.py
+   15830        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
+   15830        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
+   15830        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
+   15830        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
+   15830        Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
+   14376        python/PhysicsTools/NanoAODTools/postprocessing/helpers/TauTriggerSFTool.py
+   14334        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-UL2018-100bins_withVar.root
+   14334        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-UL2017-100bins_withVar.root
+   14334        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-UL2016-100bins_withVar.root
+   14334        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-UL2018-100bins_withVar.root
+   14334        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-UL2017-100bins_withVar.root
+   14334        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-UL2016-100bins_withVar.root
+   13943        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/muonIDISOSFProducer.pyc
+   13325        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetSmearer.py
+   12676        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/eleveto_PV.root
+   12676        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/eleveto_PV.root
+   12674        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/eleveto_PV.root
+   12674        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/eleveto_PV.root
+   12587        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/eleveto_CSEV.root
+   12587        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/eleveto_CSEV.root
+   12583        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/eleveto_CSEV.root
+   12583        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/eleveto_CSEV.root
+   12412        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetRecalib.py
+   12159        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetRecalib.pyc
+   12154        python/PhysicsTools/NanoAODTools/postprocessing/framework/postprocessor.py
+   12065        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_JRV2_DATA.tgz
+   11631        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/eleIDSFProducer.py
+   11627        python/PhysicsTools/NanoAODTools/postprocessing/helpers/TauIDSFTool.py
+   11625        python/PhysicsTools/NanoAODTools/postprocessing/helpers/TauTriggerSFTool.pyc
+   11584        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL18_JRV2_MC.tgz
+   11532        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/tauCorrProducer.py
+   11429        python/PhysicsTools/NanoAODTools/postprocessing/helpers/TauIDSFTool.pyc
+   11285        python/PhysicsTools/NanoAODTools/postprocessing/modules/btv/btagSFProducer.pyc
+   11244        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/mcPileupUL2018.root
+   11244        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/mcPileupUL2016.root
+   11244        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/mcPileupUL2018.root
+   11244        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/mcPileupUL2016.root
+   11045        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/FakeRateProducer.py
+   11030        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/EGM2D_eleMVA90.root
+   11030        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/EGM2D_eleMVA90.root
+   10958        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/egamma_RECO_high.root
+   10958        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/egamma_RECO_high.root
+   10918        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/egamma_RECO_high.root
+   10918        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/egamma_RECO_high.root
+   10760        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/egamma_RECO_low.root
+   10760        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/egamma_RECO_low.root
+   10725        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/egamma_RECO_low.root
+   10725        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/egamma_RECO_low.root
+   10165        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/tauCorrProducer.pyc
+    9668        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR.cc
+    9668        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR.cc
+    9541        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-2018-100bins_withVar.root
+    9541        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-2018-100bins_withVar.root
+    9500        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-2018-99bins_withVar.root
+    9500        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-2018-99bins_withVar.root
+    9483        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-2017-99bins_withVar.root
+    9483        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-2017-99bins_withVar.root
+    9303        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2016/egamma_RECO_high.root
+    9303        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2016/egamma_RECO_high.root
+    9254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/FakeRateProducer.pyc
+    9249        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-UL2017-99bins_withVar.root
+    9249        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-UL2017-99bins_withVar.root
+    9076        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/pileup_Cert_294927-306462_13TeV_PromptReco_Collisions17_withVar.root
+    9076        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/pileup_Cert_294927-306462_13TeV_PromptReco_Collisions17_withVar.root
+    8933        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/crab_help.py
+    8871        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jecUncertainties.pyc
+    8456        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2016Legacy_EMB.root
+    8456        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2016Legacy_EMB.root
+    8452        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2017ReReco_EMB.root
+    8452        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2017ReReco_EMB.root
+    8441        python/PhysicsTools/NanoAODTools/postprocessing/framework/postprocessor.pyc
+    8299        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/eleIDSFProducer.pyc
+    7856        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupData_GoldenJSON_Full2016.root
+    7856        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupData_GoldenJSON_Full2016.root
+    7783        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/EGM2D_eleGSF.root
+    7783        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/EGM2D_eleGSF.root
+    7678        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2018ReReco_EMB.root
+    7678        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2018ReReco_EMB.root
+    7647        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetmetHelperRun2.py
+    7578        python/PhysicsTools/NanoAODTools/postprocessing/framework/output.pyc
+    7376        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/PrefireCorr.py
+    7302        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2016_postVFP.root
+    7302        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2016_postVFP.root
+    7293        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2016_preVFP.root
+    7293        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2016_preVFP.root
+    7268        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2017.root
+    7268        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2017.root
+    7264        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2018.root
+    7264        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_UL2018.root
+    7248        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2018ReReco.root
+    7248        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2018ReReco.root
+    7244        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2017ReReco.root
+    7244        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2017ReReco.root
+    7243        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/puWeightProducer.pyc
+    7236        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2016Legacy.root
+    7236        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_DeepTau2017v2p1VSjet_2016Legacy.root
+    7143        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/JetReCalibrator.py
+    7088        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/puWeightProducer.py
+    7017        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/PrefireCorr.pyc
+    6870        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jecUncertainties.py
+    6843        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetSmearer.pyc
+    6842        python/PhysicsTools/NanoAODTools/postprocessing/framework/output.py
+    6715        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/muonScaleResProducer.pyc
+    6621        python/PhysicsTools/NanoAODTools/postprocessing/framework/datamodel.pyc
+    6500        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2016/egamma_RECO_low.root
+    6500        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2016/egamma_RECO_low.root
+    6403        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/muonScaleResProducer.pyc
+    6390        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2016_postVFP.root
+    6390        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2016_postVFP.root
+    6378        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2016_preVFP.root
+    6378        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2016_preVFP.root
+    6368        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2017.root
+    6368        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2017.root
+    6367        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2018.root
+    6367        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_UL2018.root
+    6351        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_2016Legacy.root
+    6351        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_2016Legacy.root
+    6347        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_2017ReReco.root
+    6347        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_2017ReReco.root
+    6337        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_2018ReReco.root
+    6337        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSe_2018ReReco.root
+    6288        python/PhysicsTools/NanoAODTools/postprocessing/framework/treeReaderArrayTools.pyc
+    6285        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/collectionMerger.pyc
+    6268        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_MVAoldDM2017v2_2017ReReco.root
+    6268        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_MVAoldDM2017v2_2017ReReco.root
+    6267        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_MVAoldDM2017v2_2018ReReco.root
+    6267        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_MVAoldDM2017v2_2018ReReco.root
+    6265        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_dm_MVAoldDM2017v2_2016Legacy.root
+    6265        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_dm_MVAoldDM2017v2_2016Legacy.root
+    6257        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/jetmetHelperRun2.pyc
+    5701        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_jetempt_UL2017BtoF.root
+    5682        python/PhysicsTools/NanoAODTools/postprocessing/framework/treeReaderArrayTools.py
+    5673        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_jetempt_2017BtoF.root
+    5671        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_jetempt_2016BtoH.root
+    5489        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/JetReCalibrator.pyc
+    5465        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_jetpt_2016BtoH.root
+    5447        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_antiEleMVA6_2018ReReco.root
+    5447        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_antiEleMVA6_2018ReReco.root
+    5445        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_antiEleMVA6_2017ReReco.root
+    5445        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/README
+    5445        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_antiEleMVA6_2017ReReco.root
+    5445        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/README
+    5441        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_jetpt_2017BtoF.root
+    5434        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_antiEleMVA6_2016Legacy.root
+    5434        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_antiEleMVA6_2016Legacy.root
+    5399        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_photonpt_2017BtoF.root
+    5355        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_photonpt_2016BtoH.root
+    5312        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-UL2018.root
+    5312        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/PileupHistogram-goldenJSON-13tev-UL2018.root
+    5249        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSmu_2018ReReco.root
+    5249        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSmu_2018ReReco.root
+    5248        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSmu_2017ReReco.root
+    5248        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSmu_2016Legacy.root
+    5248        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSmu_2017ReReco.root
+    5248        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_DeepTau2017v2p1VSmu_2016Legacy.root
+    5221        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_photonpt_UL2017BtoF.root
+    5203        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/TTC_postproc.py
+    5189        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/Run2017-example.root
+    5189        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/Run2017-example.root
+    5171        src/PhysicsTools/NanoAODTools/data/prefire_maps/L1prefiring_jetpt_UL2017BtoF.root
+    5132        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakeLep_script.py
+    5076        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script.py
+    5076        crab_script.py
+    5049        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakeRate_script.py
+    5002        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/nano_postproc.py
+    4981        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/collectionMerger.py
+    4970        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauFES_eta-dm_DeepTau2017v2p1VSe_2018ReReco.root
+    4970        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauFES_eta-dm_DeepTau2017v2p1VSe_2017ReReco.root
+    4970        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauFES_eta-dm_DeepTau2017v2p1VSe_2016Legacy.root
+    4970        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauFES_eta-dm_DeepTau2017v2p1VSe_2018ReReco.root
+    4970        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauFES_eta-dm_DeepTau2017v2p1VSe_2017ReReco.root
+    4970        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauFES_eta-dm_DeepTau2017v2p1VSe_2016Legacy.root
+    4905        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR.h
+    4905        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/RoccoR.h
+    4898        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/pre-rebase.sample
+    4801        python/PhysicsTools/NanoAODTools/postprocessing/framework/datamodel.py
+    4746        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/run.py
+    4712        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/submit_fakelep.sh
+    4603        python/PhysicsTools/NanoAODTools/postprocessing/framework/eventloop.pyc
+    4595        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/TTC_postproc.pyc
+    4497        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/submit.sh
+    4470        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/mcPileup2018.root
+    4470        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/mcPileup2018.root
+    4453        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/eleRECOSFProducer.pyc
+    4444        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakeLep_script.pyc
+    4398        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script.pyc
+    4337        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/haddnano.py
+    4337        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakeRate_script.pyc
+    4337        haddnano.py
+    4336        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/haddnano.py
+    4307        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/JetSysColl.pyc
+    4293        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/hepmcDump.pyc
+    4276        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_antiMu3_2016Legacy.root
+    4276        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_antiMu3_2016Legacy.root
+    4227        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/run.pyc
+    4211        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_antiMu3_2017ReReco.root
+    4211        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/lepSFProducer.pyc
+    4211        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_antiMu3_2017ReReco.root
+    4207        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/muonScaleResProducer.py
+    4202        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauID_SF_eta_antiMu3_2018ReReco.root
+    4202        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauID_SF_eta_antiMu3_2018ReReco.root
+    4177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/muonScaleResProducer.py
+    4141        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/pileup_profile_Spring16.root
+    4141        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/pileup_profile_Spring16.root
+    4120        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/nano_postproc.pyc
+    4072        python/PhysicsTools/NanoAODTools/postprocessing/tools.pyc
+    4066        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/hepmcDump.py
+    4041        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/mcPileupUL2017.root
+    4041        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/mcPileupUL2017.root
+    4011        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/mcPileup2017.root
+    4011        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/mcPileup2017.root
+    3939        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/mht.pyc
+    3825        python/PhysicsTools/NanoAODTools/postprocessing/framework/preskimming.pyc
+    3819        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2017ReReco_ptgt100.root
+    3819        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2017ReReco_ptgt100.root
+    3817        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2018ReReco_ptgt100.root
+    3817        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2018ReReco_ptgt100.root
+    3816        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2016Legacy_ptgt100.root
+    3816        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2016Legacy_ptgt100.root
+    3804        python/PhysicsTools/NanoAODTools/postprocessing/analysis/README.md
+    3800        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2016_preVFP.root
+    3800        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/pileup_profile_Summer16.root
+    3800        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2016_preVFP.root
+    3800        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/pileup_profile_Summer16.root
+    3795        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2016_postVFP.root
+    3795        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2016_postVFP.root
+    3781        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2017ReReco.root
+    3781        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2017ReReco.root
+    3778        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2016Legacy.root
+    3778        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2016Legacy.root
+    3775        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2018ReReco.root
+    3775        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_2018ReReco.root
+    3771        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2017.root
+    3771        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2017.root
+    3767        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2018.root
+    3767        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_DeepTau2017v2p1VSjet_UL2018.root
+    3762        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2018ReReco_ptgt100.root
+    3762        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2018ReReco_ptgt100.root
+    3761        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2017ReReco_ptgt100.root
+    3761        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2017ReReco_ptgt100.root
+    3759        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2016Legacy_ptgt100.root
+    3759        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2016Legacy_ptgt100.root
+    3757        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2017ReReco.root
+    3757        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2017ReReco.root
+    3752        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2018ReReco.root
+    3752        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2018ReReco.root
+    3746        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2016Legacy.root
+    3746        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_MVAoldDM2017v2_2016Legacy.root
+    3729        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/haddnano.pyc
+    3709        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_2017ReReco.root
+    3709        python/PhysicsTools/NanoAODTools/postprocessing/framework/jobreport.py
+    3709        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_2017ReReco.root
+    3700        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_2018ReReco.root
+    3700        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_2018ReReco.root
+    3699        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/haddnano.pyc
+    3696        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/TauES_dm_2016Legacy.root
+    3696        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/TauES_dm_2016Legacy.root
+    3640        python/PhysicsTools/NanoAODTools/postprocessing/framework/eventloop.py
+    3610        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/update.sample
+    3566        python/PhysicsTools/NanoAODTools/postprocessing/framework/jobreport.pyc
+    3407        python/PhysicsTools/NanoAODTools/postprocessing/examples/mhtjuProducerCpp.pyc
+    3327        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/fsmonitor-watchman.sample
+    3260        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/htProducerCpp.pyc
+    3210        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/lepSFProducer.py
+    3160        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/eleRECOSFProducer.py
+    3111        python/PhysicsTools/NanoAODTools/postprocessing/framework/preskimming.py
+    3026        src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_JRV2_MC.tgz
+    2982        python/PhysicsTools/NanoAODTools/postprocessing/tools.py
+    2975        lib/slc7_amd64_gcc700/PhysicsToolsNanoAODTools_xr_rdict.pcm
+    2962        python/PhysicsTools/NanoAODTools/postprocessing/helpers/LeptonEfficiencyCorrector.cc
+    2926        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/inputs/PSet.pkl
+    2926        PSet.pkl
+    2837        python/PhysicsTools/NanoAODTools/postprocessing/examples/exampleModule.pyc
+    2752        python/PhysicsTools/NanoAODTools/postprocessing/examples/mhtjuProducerCpp.py
+    2710        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/mht.py
+    2559        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/readme.md
+    2558        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/htProducerCpp.py
+    2558        python/PhysicsTools/NanoAODTools/postprocessing/examples/exampleAnalysis.pyc
+    2549        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/countHistogramsModule.pyc
+    2527        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/nano_report.pyc
+    2462        python/PhysicsTools/NanoAODTools/postprocessing/framework/crabhelper.py
+    2412        python/PhysicsTools/NanoAODTools/postprocessing/framework/crabhelper.pyc
+    2403        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/JetSysColl.py
+    2285        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab.log
+    2251        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/nano_report.py
+    2207        src/PhysicsTools/NanoAODTools/interface/hepmcDumpCppWorker.h
+    2172        python/PhysicsTools/NanoAODTools/postprocessing/framework/branchselection.pyc
+    1893        python/PhysicsTools/NanoAODTools/postprocessing/framework/branchselection.py
+    1823        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/status.sh
+    1754        python/PhysicsTools/NanoAODTools/postprocessing/examples/exampleAnalysis.py
+    1710        python/PhysicsTools/NanoAODTools/postprocessing/analysis/init.sh
+    1638        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/pre-commit.sample
+    1604        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/submit.sh
+    1492        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/prepare-commit-msg.sample
+    1450        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/countHistogramsModule.py
+    1425        python/PhysicsTools/NanoAODTools/postprocessing/examples/exampleModule.py
+    1348        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/pre-push.sample
+    1319        src/PhysicsTools/NanoAODTools/interface/jecUncertProducerCppWorker.h
+    1297        src/PhysicsTools/NanoAODTools/interface/ReduceMantissa.h
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonF_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonE_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonD_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonC_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonB_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGF_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGE_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGD_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGC_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGB_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonF_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonE_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonD_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonC_cfg.pyc
+    1266        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonB_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGF_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGE_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGD_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGC_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGB_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonF_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonE_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonD_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonC_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonB_cfg.pyc
+    1265        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tbar_tch_cfg.pyc
+    1264        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/tbar_tch_cfg.pyc
+    1261        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tbarW_cfg.pyc
+    1260        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/tbarW_cfg.pyc
+    1260        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGF_cfg.pyc
+    1260        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGE_cfg.pyc
+    1260        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGD_cfg.pyc
+    1260        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGC_cfg.pyc
+    1260        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGB_cfg.pyc
+    1259        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ssww_cfg.pyc
+    1256        python/PhysicsTools/NanoAODTools/postprocessing/examples/example_postproc.py
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/t_tch_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonF_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonE_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonD_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonC_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonB_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGF_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGE_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGD_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGC_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGB_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonF_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonE_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonD_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonC_cfg.pyc
+    1255        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonB_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/t_tch_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGF_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGE_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGD_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGC_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGB_cfg.pyc
+    1254        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tbar_tch_cfg.pyc
+    1253        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_300toinf_cfg.pyc
+    1253        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_170to300_cfg.pyc
+    1253        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_120to170_cfg.pyc
+    1250        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/t_sch_cfg.pyc
+    1250        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_80to120_cfg.pyc
+    1250        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tbarW_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/t_sch_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttWToQQ_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGF_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGE_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGD_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGC_cfg.pyc
+    1249        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGB_cfg.pyc
+    1248        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tW_cfg.pyc
+    1248        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ssww_cfg.pyc
+    1247        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/tW_cfg.pyc
+    1247        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_50to80_cfg.pyc
+    1245        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttW_cfg.pyc
+    1245        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METF_cfg.pyc
+    1245        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METD_cfg.pyc
+    1245        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METC_cfg.pyc
+    1245        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METB_cfg.pyc
+    1244        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/t_tch_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGB_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonB_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGB_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonB_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonB_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGB_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonF_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonE_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonD_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonC_cfg.pyc
+    1243        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonB_cfg.pyc
+    1242        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_300toinf_cfg.pyc
+    1242        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_170to300_cfg.pyc
+    1242        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_120to170_cfg.pyc
+    1242        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tbar_tch_cfg.pyc
+    1242        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tbar_tch_cfg.pyc
+    1240        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZToQQ_cfg.pyc
+    1239        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/t_sch_cfg.pyc
+    1239        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_80to120_cfg.pyc
+    1238        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/TTto1L_cfg.pyc
+    1238        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttWToQQ_cfg.pyc
+    1238        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tbarW_cfg.pyc
+    1238        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tbarW_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/TTto1L_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tW_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGF_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGE_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGD_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGC_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGB_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGF_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGE_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGD_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGC_cfg.pyc
+    1237        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGB_cfg.pyc
+    1236        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZToNuNu_cfg.pyc
+    1236        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_50to80_cfg.pyc
+    1235        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tzq_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wjet_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZ_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttH_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/dy_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/TTto2L_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttW_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METF_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METD_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METC_cfg.pyc
+    1234        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METB_cfg.pyc
+    1233        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/wjet_cfg.pyc
+    1233        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/dy_cfg.pyc
+    1233        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/TTto2L_cfg.pyc
+    1232        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wwz2_cfg.pyc
+    1232        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/www2_cfg.pyc
+    1232        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/t_tch_cfg.pyc
+    1232        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/t_tch_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGF_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGE_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGD_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGC_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGB_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGF_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGE_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGD_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGC_cfg.pyc
+    1231        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGB_cfg.pyc
+    1230        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_300toinf_cfg.pyc
+    1230        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_170to300_cfg.pyc
+    1230        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_120to170_cfg.pyc
+    1230        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_300toinf_cfg.pyc
+    1230        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_170to300_cfg.pyc
+    1230        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_120to170_cfg.pyc
+    1229        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/zzz2_cfg.pyc
+    1229        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZToQQ_cfg.pyc
+    1227        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/TTto1L_cfg.pyc
+    1227        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/t_sch_cfg.pyc
+    1227        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_80to120_cfg.pyc
+    1227        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/t_sch_cfg.pyc
+    1227        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_80to120_cfg.pyc
+    1226        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wwz_cfg.pyc
+    1226        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/www_cfg.pyc
+    1226        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttWToQQ_cfg.pyc
+    1226        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttWToQQ_cfg.pyc
+    1225        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZToNuNu_cfg.pyc
+    1225        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tW_cfg.pyc
+    1225        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tW_cfg.pyc
+    1224        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZZ_cfg.pyc
+    1224        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttWZ_cfg.pyc
+    1224        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttWW_cfg.pyc
+    1224        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tzq_cfg.pyc
+    1224        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_50to80_cfg.pyc
+    1224        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_50to80_cfg.pyc
+    1223        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/zzz_cfg.pyc
+    1223        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wjet_cfg.pyc
+    1223        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZ_cfg.pyc
+    1223        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttH_cfg.pyc
+    1223        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/dy_cfg.pyc
+    1223        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/TTto2L_cfg.pyc
+    1222        src/PhysicsTools/NanoAODTools/interface/WeightCalculatorFromHistogram.h
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttW_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METF_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METD_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METC_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METB_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttW_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METF_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METD_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METC_cfg.pyc
+    1222        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METB_cfg.pyc
+    1221        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wzz_cfg.pyc
+    1221        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wwz2_cfg.pyc
+    1221        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/www2_cfg.pyc
+    1218        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/zzz2_cfg.pyc
+    1217        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZToQQ_cfg.pyc
+    1217        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZToQQ_cfg.pyc
+    1216        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZToNuNu_cfg.pyc
+    1216        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZToNuNu_cfg.pyc
+    1215        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wwz_cfg.pyc
+    1215        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/www_cfg.pyc
+    1215        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/TTto1L_cfg.pyc
+    1215        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/TTto1L_cfg.pyc
+    1213        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZZ_cfg.pyc
+    1213        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttWZ_cfg.pyc
+    1213        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttWW_cfg.pyc
+    1212        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/zzz_cfg.pyc
+    1212        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tzq_cfg.pyc
+    1212        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tzq_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wjet_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZ_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttH_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/dy_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wjet_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZ_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttH_cfg.pyc
+    1211        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/TTto2L_cfg.pyc
+    1210        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wzz_cfg.pyc
+    1209        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/zz_cfg.pyc
+    1209        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wz_cfg.pyc
+    1209        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ww_cfg.pyc
+    1209        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wwz2_cfg.pyc
+    1209        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/www2_cfg.pyc
+    1208        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/ww_cfg.pyc
+    1208        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/dy_cfg.pyc
+    1207        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METE_cfg.pyc
+    1206        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/zzz2_cfg.pyc
+    1203        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wzz_cfg.pyc
+    1203        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wwz_cfg.pyc
+    1203        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/www_cfg.pyc
+    1203        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wwz_cfg.pyc
+    1203        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/www_cfg.pyc
+    1201        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZZ_cfg.pyc
+    1201        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttWZ_cfg.pyc
+    1201        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttWW_cfg.pyc
+    1201        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZZ_cfg.pyc
+    1201        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttWZ_cfg.pyc
+    1201        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttWW_cfg.pyc
+    1200        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/zzz_cfg.pyc
+    1200        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/zzz_cfg.pyc
+    1198        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/zz_cfg.pyc
+    1198        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wz_cfg.pyc
+    1198        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ww_cfg.pyc
+    1198        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wzz_cfg.pyc
+    1196        python/PhysicsTools/NanoAODTools/postprocessing/examples/example_postproc.pyc
+    1196        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METE_cfg.pyc
+    1186        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/zz_cfg.pyc
+    1186        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wz_cfg.pyc
+    1186        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ww_cfg.pyc
+    1186        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/zz_cfg.pyc
+    1186        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wz_cfg.pyc
+    1186        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ww_cfg.pyc
+    1184        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METE_cfg.pyc
+    1160        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/go_crab.sh
+    1135        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METE_cfg.pyc
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/FrameworkJobReport.xml
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGF_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGE_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGD_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGC_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/SingleEGB_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonF_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonE_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonD_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonC_cfg.py
+    1117        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/DoubleMuonB_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonF_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonE_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonD_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonC_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleMuonB_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGF_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGE_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGD_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGC_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/SingleEGB_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonF_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonE_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonD_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonC_cfg.py
+    1116        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleMuonB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleMuonB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/SingleEGB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleMuonB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleMuonB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/SingleEGB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleMuonB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleMuonB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/SingleEGB_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonF_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonE_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonD_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonC_cfg.py
+    1113        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleMuonB_cfg.py
+    1110        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGF_cfg.py
+    1110        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGE_cfg.py
+    1110        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGD_cfg.py
+    1110        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGC_cfg.py
+    1110        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/DoubleEGB_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGF_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGE_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGD_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGC_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/DoubleEGB_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGF_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGE_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGD_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGC_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/DoubleEGB_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGF_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGE_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGD_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGC_cfg.py
+    1107        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/DoubleEGB_cfg.py
+    1104        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGF_cfg.py
+    1104        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGE_cfg.py
+    1104        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGD_cfg.py
+    1104        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGC_cfg.py
+    1104        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/MuonEGB_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGF_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGE_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGD_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGC_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/MuonEGB_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGF_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGE_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGD_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGC_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/MuonEGB_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGF_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGE_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGD_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGC_cfg.py
+    1101        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/MuonEGB_cfg.py
+    1094        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_170to300_cfg.py
+    1094        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_120to170_cfg.py
+    1091        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_170to300_cfg.py
+    1091        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_120to170_cfg.py
+    1080        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZToNuNu_cfg.py
+    1077        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZToNuNu_cfg.py
+    1074        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZ_cfg.py
+    1071        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZ_cfg.py
+    1070        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/TTto2L_cfg.pyc
+    1067        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/tbar_tch_cfg.py
+    1066        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tbar_tch_cfg.py
+    1063        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/tbarW_cfg.py
+    1063        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tbar_tch_cfg.py
+    1063        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tbar_tch_cfg.py
+    1063        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tbar_tch_cfg.py
+    1062        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tbarW_cfg.py
+    1060        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ssww_cfg.py
+    1059        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tbarW_cfg.py
+    1059        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tbarW_cfg.py
+    1059        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tbarW_cfg.py
+    1057        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/t_tch_cfg.py
+    1057        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ssww_cfg.py
+    1056        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/t_tch_cfg.py
+    1056        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METE_cfg.py
+    1055        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METF_cfg.py
+    1055        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METD_cfg.py
+    1055        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METC_cfg.py
+    1055        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METB_cfg.py
+    1054        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_300toinf_cfg.py
+    1053        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/t_tch_cfg.py
+    1053        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/t_tch_cfg.py
+    1053        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/t_tch_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/t_sch_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METF_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METD_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METC_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METB_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METF_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METD_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METC_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/METB_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METF_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METD_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METC_cfg.py
+    1052        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METB_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/t_sch_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_80to120_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_300toinf_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_300toinf_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_170to300_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_120to170_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_300toinf_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_170to300_cfg.py
+    1051        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_120to170_cfg.py
+    1050        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/tW_cfg.py
+    1050        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttWToQQ_cfg.py
+    1049        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttW_cfg.py
+    1049        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tW_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/QCD_50to80_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/t_sch_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_80to120_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/t_sch_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_80to120_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/t_sch_cfg.py
+    1048        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_80to120_cfg.py
+    1047        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttWToQQ_cfg.py
+    1047        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttWToQQ_cfg.py
+    1047        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttWToQQ_cfg.py
+    1046        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttW_cfg.py
+    1046        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tW_cfg.py
+    1046        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttW_cfg.py
+    1046        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tW_cfg.py
+    1046        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttW_cfg.py
+    1046        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tW_cfg.py
+    1045        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/QCD_50to80_cfg.py
+    1045        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/QCD_50to80_cfg.py
+    1045        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/QCD_50to80_cfg.py
+    1041        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZToQQ_cfg.py
+    1040        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/TTto1L_cfg.py
+    1039        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/TTto2L_cfg.py
+    1039        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/TTto1L_cfg.py
+    1039        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/TTto2L_cfg.py
+    1038        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/TTto2L_cfg.py
+    1038        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZToQQ_cfg.py
+    1038        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZToQQ_cfg.py
+    1038        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZToQQ_cfg.py
+    1037        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/wjet_cfg.py
+    1037        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZToNuNu_cfg.py
+    1037        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZToNuNu_cfg.py
+    1036        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/dy_cfg.py
+    1036        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wjet_cfg.py
+    1036        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/tzq_cfg.py
+    1036        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/TTto1L_cfg.py
+    1036        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/TTto1L_cfg.py
+    1036        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/TTto1L_cfg.py
+    1035        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttH_cfg.py
+    1035        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/dy_cfg.py
+    1035        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/TTto2L_cfg.py
+    1035        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/TTto2L_cfg.py
+    1034        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wwz2_cfg.py
+    1034        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/www2_cfg.py
+    1033        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wjet_cfg.py
+    1033        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/tzq_cfg.py
+    1033        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wjet_cfg.py
+    1033        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/tzq_cfg.py
+    1033        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wjet_cfg.py
+    1033        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/tzq_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttH_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/dy_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZ_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttH_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/dy_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZ_cfg.py
+    1032        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttH_cfg.py
+    1031        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/zzz2_cfg.py
+    1031        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wwz2_cfg.py
+    1031        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/www2_cfg.py
+    1031        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wwz2_cfg.py
+    1031        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/www2_cfg.py
+    1030        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/resubmit.sh
+    1029        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wwz_cfg.py
+    1029        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/www_cfg.py
+    1029        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/dy_cfg.py
+    1028        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/zzz2_cfg.py
+    1028        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/zzz2_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/zzz_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wwz_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/www_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wwz_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/www_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wwz_cfg.py
+    1026        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/www_cfg.py
+    1025        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttZZ_cfg.py
+    1025        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttWZ_cfg.py
+    1025        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ttWW_cfg.py
+    1024        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wzz_cfg.py
+    1023        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/METE_cfg.py
+    1023        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/zzz_cfg.py
+    1023        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/zzz_cfg.py
+    1023        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/zzz_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wzz_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttZZ_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttWZ_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ttWW_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttZZ_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttWZ_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ttWW_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttZZ_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttWZ_cfg.py
+    1022        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ttWW_cfg.py
+    1020        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/METE_cfg.py
+    1020        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/METE_cfg.py
+    1019        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wzz_cfg.py
+    1019        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wzz_cfg.py
+    1011        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/ww_cfg.py
+    1010        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/zz_cfg.py
+    1010        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/wz_cfg.py
+    1010        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/ww_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/zz_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/wz_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/ww_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/zz_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/wz_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/ww_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/zz_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/wz_cfg.py
+    1007        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/ww_cfg.py
+     896        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/commit-msg.sample
+     787        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/PSet.py
+     787        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/PSet.py
+     787        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/PSet.py
+     787        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/PSet.py
+     787        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/PSet.py
+     745        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/PSet.pyc
+     739        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/PSet.pyc
+     736        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/PSet.pyc
+     728        src/PhysicsTools/NanoAODTools/interface/mhtjuProducerCppWorker.h
+     727        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/PSet.pyc
+     727        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/PSet.pyc
+     681        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/README.md
+     681        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/README.md
+     680        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/run.sh
+     636        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script_dataF.sh
+     636        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script_dataE.sh
+     636        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script_dataD.sh
+     636        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script_dataC.sh
+     636        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script_dataB.sh
+     635        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script_data.sh
+     635        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script_dataF.sh
+     635        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script_dataE.sh
+     635        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script_dataD.sh
+     635        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script_dataC.sh
+     635        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script_dataB.sh
+     634        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script_data.sh
+     633        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/crab_script.sh
+     632        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/crab_script.sh
+     632        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script_dataF.sh
+     632        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script_dataE.sh
+     632        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script_dataD.sh
+     632        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script_dataC.sh
+     632        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script_dataB.sh
+     632        crab_script_dataB.sh
+     631        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script_data.sh
+     629        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_script.sh
+     615        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/crab_script.sh
+     593        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/input.json
+     582        lib/slc7_amd64_gcc700/PhysicsToolsNanoAODTools_xr.rootmap
+     577        src/PhysicsTools/NanoAODTools/interface/PyJetResolutionScaleFactorWrapper.h
+     569        src/PhysicsTools/NanoAODTools/interface/htProducerCppWorker.h
+     544        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/pre-receive.sample
+     500        src/PhysicsTools/NanoAODTools/interface/PyJetResolutionWrapper.h
+     478        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/applypatch-msg.sample
+     465        src/PhysicsTools/NanoAODTools/interface/PyJetParametersWrapper.h
+     424        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/pre-applypatch.sample
+     417        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/inputs/PSetDump.py
+     417        PSetDump.py
+     414        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/keep_and_drop.txt
+     414        keep_and_drop.txt
+     413        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/keep_and_drop.txt
+     413        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/keep_and_drop.txt
+     400        python/PhysicsTools/NanoAODTools/__init__.pyc
+     381        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/submit.sh
+     256        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/config
+     240        python/PhysicsTools/__init__.pyc
+     240        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/info/exclude
+     202        python/PhysicsTools/NanoAODTools/__init__.py
+     195        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/__init__.pyc
+     193        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/__init__.pyc
+     189        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes/origin/__init__.pyc
+     189        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/post-update.sample
+     187        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/__init__.pyc
+     184        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes/origin/__init__.pyc
+     183        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/packed-refs
+     182        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/__init__.pyc
+     182        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes/__init__.pyc
+     181        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/__init__.pyc
+     181        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/__init__.pyc
+     180        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/heads/__init__.pyc
+     177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes/__init__.pyc
+     177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/pack/__init__.pyc
+     177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/info/__init__.pyc
+     177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes/origin/HEAD
+     177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/heads/main
+     177        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/HEAD
+     176        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/__init__.pyc
+     175        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/__init__.pyc
+     175        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/__init__.pyc
+     175        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/heads/__init__.pyc
+     174        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/tags/__init__.pyc
+     174        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/__init__.pyc
+     173        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/__init__.pyc
+     173        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/__init__.pyc
+     173        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2016/__init__.pyc
+     173        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/__init__.pyc
+     173        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/__init__.pyc
+     173        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2016/__init__.pyc
+     173        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/__init__.pyc
+     173        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/branches/__init__.pyc
+     172        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/__init__.pyc
+     170        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/__init__.pyc
+     169        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/__init__.pyc
+     169        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/__init__.pyc
+     169        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/info/__init__.pyc
+     167        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/__init__.pyc
+     167        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/__init__.pyc
+     165        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/__init__.pyc
+     164        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/__init__.pyc
+     164        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/__init__.pyc
+     164        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/__init__.pyc
+     164        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/__init__.pyc
+     164        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/__init__.pyc
+     164        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/__init__.pyc
+     164        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/__init__.pyc
+     162        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/__init__.pyc
+     162        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/__init__.pyc
+     162        python/PhysicsTools/NanoAODTools/postprocessing/modules/btv/__init__.pyc
+     162        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/__init__.pyc
+     160        python/PhysicsTools/NanoAODTools/postprocessing/framework/__init__.pyc
+     159        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/__init__.pyc
+     159        python/PhysicsTools/NanoAODTools/postprocessing/examples/__init__.pyc
+     159        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/__init__.pyc
+     159        python/PhysicsTools/NanoAODTools/postprocessing/analysis/__init__.pyc
+     158        python/PhysicsTools/NanoAODTools/postprocessing/modules/__init__.pyc
+     158        python/PhysicsTools/NanoAODTools/postprocessing/helpers/__init__.pyc
+     157        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_status.sh
+     155        src/PhysicsTools/NanoAODTools/python/postprocessing/data/__init__.pyc
+     155        python/PhysicsTools/NanoAODTools/postprocessing/data/__init__.pyc
+     150        python/PhysicsTools/NanoAODTools/postprocessing/__init__.pyc
+     105        python/__init__.pyc
+     100        python/PhysicsTools/__init__.py
+     100        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/inputs/PSet.py
+     100        PSet.py
+      80        python/PhysicsTools/NanoAODTools/postprocessing/examples/keep_and_drop.txt
+      73        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/description
+      67        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/keep_and_drop.txt
+      63        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/keep_and_drop_input.txt
+      41        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/heads/main
+      36        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/keep_and_drop.txt
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/data/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2016/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5/__init__.py
+      32        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/modules/common/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/modules/btv/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/modules/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/helpers/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/framework/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/examples/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/data/tau/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/data/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2016/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/tags/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes/origin/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/heads/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/pack/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/info/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes/origin/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/heads/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/info/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/branches/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/__init__.py
+      32        python/PhysicsTools/NanoAODTools/postprocessing/__init__.py
+      30        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes/origin/HEAD
+      27        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts/keep_and_drop_output.txt
+      26        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example/keep_and_drop.txt
+      21        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/HEAD
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/data/tau
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/data/pileup
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/data/leptonSF
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/data
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2018
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2017
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/year2016
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data/roccor.Run2UL.v5
+       0        src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/data
+       0        src/PhysicsTools/NanoAODTools/interface
+       0        src/PhysicsTools/NanoAODTools/data/prefire_maps
+       0        src/PhysicsTools/NanoAODTools/data/jme
+       0        src/PhysicsTools/NanoAODTools/data/btagSF
+       0        src/PhysicsTools/NanoAODTools/data
+       0        python/__init__.py
+       0        python/PhysicsTools/NanoAODTools/postprocessing/modules/jme
+       0        python/PhysicsTools/NanoAODTools/postprocessing/modules/common
+       0        python/PhysicsTools/NanoAODTools/postprocessing/modules/btv
+       0        python/PhysicsTools/NanoAODTools/postprocessing/modules
+       0        python/PhysicsTools/NanoAODTools/postprocessing/helpers
+       0        python/PhysicsTools/NanoAODTools/postprocessing/framework
+       0        python/PhysicsTools/NanoAODTools/postprocessing/examples
+       0        python/PhysicsTools/NanoAODTools/postprocessing/data/tau
+       0        python/PhysicsTools/NanoAODTools/postprocessing/data/pileup
+       0        python/PhysicsTools/NanoAODTools/postprocessing/data/leptonSF
+       0        python/PhysicsTools/NanoAODTools/postprocessing/data
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/test
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/scripts
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/modules
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2018
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2017
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/year2016
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data/roccor.Run2UL.v5
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/data
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate/fakerate_configs_v8
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakerate
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/fakelep_configs_v8
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol/configs_v8
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab_fakecontrol
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/results
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/inputs
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B/crab.log
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/crab_DoubleEG_B
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v9
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab/configs_v8
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/crab
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/auto_crab_example
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/tags
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes/origin
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/remotes
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs/heads
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/refs
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/pack
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects/info
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/objects
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes/origin
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/remotes
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs/heads
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs/refs
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/logs
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/info
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/hooks
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git/branches
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis/.git
+       0        python/PhysicsTools/NanoAODTools/postprocessing/analysis
+       0        python/PhysicsTools/NanoAODTools/postprocessing
+       0        python/PhysicsTools/NanoAODTools
+       0        python/PhysicsTools
+       0        python
+       0        lib/slc7_amd64_gcc700/.poisonededmplugincache
+       0        lib/slc7_amd64_gcc700
+       0        lib
+       0        cfipython/slc7_amd64_gcc700
+       0        cfipython
+       0        biglib/slc7_amd64_gcc700
+       0        biglib.
+More details can be found in /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_DoubleEG_B/crab.log
+[mguo@lxplus717 crab]$ cd ..
+[mguo@lxplus717 analysis]$ cd ../..
+[mguo@lxplus717 python]$ cd ..
+[mguo@lxplus717 NanoAODTools]$ cd 
+.git/       crab/       data/       interface/  python/     scripts/    src/        standalone/
+[mguo@lxplus717 NanoAODTools]$ cd 
+.git/       crab/       data/       interface/  python/     scripts/    src/        standalone/
+[mguo@lxplus717 NanoAODTools]$ cd python/postprocessing/
+[mguo@lxplus717 postprocessing]$ rm -rf analysis/
+[mguo@lxplus717 postprocessing]$ git clone -b lep_mvaID https://github.com/ExtraYukawa/ttc_bar.git
+Cloning into 'ttc_bar'...
+remote: Enumerating objects: 1939, done.
+remote: Counting objects: 100% (605/605), done.
+remote: Compressing objects: 100% (272/272), done.
+remote: Total 1939 (delta 382), reused 513 (delta 333), pack-reused 1334
+Receiving objects: 100% (1939/1939), 43.55 MiB | 3.12 MiB/s, done.
+Resolving deltas: 100% (1420/1420), done.
+Checking out files: 100% (293/293), done.
+[mguo@lxplus717 postprocessing]$ mv analysis/crab/auto_crab_example/crab_help.pyample/crab_help.py.bakab_ex 
+mv: cannot stat 'analysis/crab/auto_crab_example/crab_help.py': No such file or directory
+[mguo@lxplus717 postprocessing]$ ls   
+__init__.py  __init__.pyc  data  examples  framework  helpers  modules  tools.py  tools.pyc  ttc_bar
+[mguo@lxplus717 postprocessing]$ cd ttc_bar/
+[mguo@lxplus717 ttc_bar]$ ls
+README.md  crab  crab_fakerate  data  init.sh  modules  others  scripts  test
+[mguo@lxplus717 ttc_bar]$ cd   
+.git/          crab_fakerate/ modules/       scripts/       
+crab/          data/          others/        test/          
+[mguo@lxplus717 ttc_bar]$ cd ~
+[mguo@lxplus717 ~]$ rm -rf work/CMSSW_10_6_29/
+[mguo@lxplus717 ~]$ pwd
+/afs/cern.ch/user/m/mguo
+[mguo@lxplus717 ~]$ cd work/
+[mguo@lxplus717 work]$ cmsrel CMSSW_10_6_29
+[mguo@lxplus717 work]$ cd CMSSW_10_6_29/
+[mguo@lxplus717 CMSSW_10_6_29]$ cd src/
+[mguo@lxplus717 src]$ git clone https://github.com/cms-nanoAOD/nanoAOD-tools.git PhysicsTools/NanoAODTools
+Cloning into 'PhysicsTools/NanoAODTools'...
+remote: Enumerating objects: 4168, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 4168 (delta 7), reused 13 (delta 6), pack-reused 4148
+Receiving objects: 100% (4168/4168), 113.05 MiB | 10.97 MiB/s, done.
+Resolving deltas: 100% (2173/2173), done.
+Checking out files: 100% (369/369), done.
+[mguo@lxplus717 src]$ cd PhysicsTools/NanoAODTools/
+[mguo@lxplus717 NanoAODTools]$ cmsenv
+[mguo@lxplus717 NanoAODTools]$ scram b -j8
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+------- copying files from src/PhysicsTools/NanoAODTools/scripts -------
+>> copied keep_and_drop.txt
+>> copied keep_and_drop_output.txt
+>> copied nano_postproc.py
+>> copied haddnano.py
+>> copied keep_and_drop_input.txt
+>> copied nano_report.py
+>> Creating project symlinks
+>> Entering Package PhysicsTools/NanoAODTools
+Entering library rule at PhysicsTools/NanoAODTools
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/PyJetResolutionScaleFactorWrapper.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/mhtjuProducerCppWorker.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/hepmcDumpCppWorker.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/htProducerCppWorker.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/PyJetResolutionWrapper.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/jecUncertProducerCppWorker.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/WeightCalculatorFromHistogram.cc 
+>> Compiling  /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/src/PyJetParametersWrapper.cc 
+>> Building LCG reflex dict from header file src/PhysicsTools/NanoAODTools/src/classes.h
+>> Compiling LCG dictionary: tmp/slc7_amd64_gcc700/src/PhysicsTools/NanoAODTools/src/PhysicsToolsNanoAODTools/a/PhysicsToolsNanoAODTools_xr.cc
+>> Building shared library tmp/slc7_amd64_gcc700/src/PhysicsTools/NanoAODTools/src/PhysicsToolsNanoAODTools/libPhysicsToolsNanoAODTools.so
+Copying tmp/slc7_amd64_gcc700/src/PhysicsTools/NanoAODTools/src/PhysicsToolsNanoAODTools/libPhysicsToolsNanoAODTools.so to productstore area:
+>> Checking EDM Class Version for src/PhysicsTools/NanoAODTools/src/classes_def.xml in libPhysicsToolsNanoAODTools.so
+@@@@ ----> OK  EDM Class Version 
+>> Checking EDM Class Transients in libPhysicsToolsNanoAODTools.so
+@@@@ ----> OK  EDM Class Transients 
+Leaving library rule at PhysicsTools/NanoAODTools
+>> Leaving Package PhysicsTools/NanoAODTools
+>> Package PhysicsTools/NanoAODTools built
+gmake[1]: Entering directory '/eos/home-m/mguo/CMSSW_10_6_29'
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Creating project symlinks
+>> Plugins of all types refreshed.
+>> Done python_symlink
+>> Compiling python modules python
+>> Compiling python modules src/PhysicsTools/NanoAODTools/python
+>> Done generating edm plugin poisoned information
+>> All python modules compiled
+gmake[1]: Leaving directory '/eos/home-m/mguo/CMSSW_10_6_29'
+[mguo@lxplus717 NanoAODTools]$ cd python/postprocessing/
+[mguo@lxplus717 postprocessing]$ git clone -b lep_mvaID git@github.com:ExtraYukawa/ttc_bar.git analysis
+Cloning into 'analysis'...
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[mguo@lxplus717 postprocessing]$ git clone -b lep_mvaID https://github.com/ExtraYukawa/ttc_bar.git analysis
+Cloning into 'analysis'...
+remote: Enumerating objects: 1939, done.
+remote: Counting objects: 100% (605/605), done.
+remote: Compressing objects: 100% (272/272), done.
+remote: Total 1939 (delta 382), reused 513 (delta 333), pack-reused 1334
+Receiving objects: 100% (1939/1939), 43.55 MiB | 11.04 MiB/s, done.
+Resolving deltas: 100% (1420/1420), done.
+Checking out files: 100% (293/293), done.
+[mguo@lxplus717 postprocessing]$ mv analysis/crab/auto_crab_example/crab_help.pyample/crab_help.py.bakab_exa
+[mguo@lxplus717 postprocessing]$ cd ~/work/CMSSW_10_6_29/src/
+[mguo@lxplus717 src]$ scram b -j8
+Reading cached build data
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Building CMSSW version CMSSW_10_6_29 ----
+------- copying files from src/PhysicsTools/NanoAODTools/scripts -------
+>> Subsystem BigProducts built
+>> Entering Package PhysicsTools/NanoAODTools
+>> Creating project symlinks
+>> copied keep_and_drop.txt
+>> copied keep_and_drop_output.txt
+>> copied nano_postproc.py
+>> copied haddnano.py
+>> copied keep_and_drop_input.txt
+>> copied nano_report.py
+>> Leaving Package PhysicsTools/NanoAODTools
+>> Package PhysicsTools/NanoAODTools built
+>> Subsystem PhysicsTools built
+gmake[1]: Entering directory '/eos/home-m/mguo/CMSSW_10_6_29'
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Done generating edm plugin poisoned information
+>> Creating project symlinks
+>> Plugins of all types refreshed.
+>> Done python_symlink
+>> Compiling python modules cfipython/slc7_amd64_gcc700
+>> Compiling python modules src/PhysicsTools/NanoAODTools/python
+>> Compiling python modules python
+>> All python modules compiled
+gmake[1]: Leaving directory '/eos/home-m/mguo/CMSSW_10_6_29'
+[mguo@lxplus717 src]$ cd $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis
+[mguo@lxplus717 analysis]$ sh init.sh 2016
+Initing
+/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/
+Initiating setup for 2016......
+Updating pileup
+Updating prefiring correction
+Updateing JME correction
+cleaning unused files
+Updating BJet related
+Cleaning
+Cleaning
+redo scram
+Reading cached build data
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Building CMSSW version CMSSW_10_6_29 ----
+>> Entering Package PhysicsTools/NanoAODTools
+>> Creating project symlinks
+------- copying files from src/PhysicsTools/NanoAODTools/scripts -------
+>> copied keep_and_drop.txt
+>> copied keep_and_drop_output.txt
+>> copied nano_postproc.py
+>> copied haddnano.py
+>> copied keep_and_drop_input.txt
+>> copied nano_report.py
+>> Leaving Package PhysicsTools/NanoAODTools
+>> Package PhysicsTools/NanoAODTools built
+>> Subsystem PhysicsTools built
+>> Subsystem BigProducts built
+gmake[1]: Entering directory '/eos/home-m/mguo/CMSSW_10_6_29'
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+>> Creating project symlinks
+>> Done python_symlink
+>> Compiling python modules cfipython/slc7_amd64_gcc700
+>> Compiling python modules python
+>> Compiling python modules src/PhysicsTools/NanoAODTools/python
+>> All python modules compiled
+>> Plugins of all types refreshed.
+>> Done generating edm plugin poisoned information
+gmake[1]: Leaving directory '/eos/home-m/mguo/CMSSW_10_6_29'
+Initing Done \(ᵔᵕᵔ)/
+[mguo@lxplus717 analysis]$ cd crab
+[mguo@lxplus717 crab]$ ls
+2016_script
+2016apv_script
+2017_script
+2018_script
+Cert_271036-284044_13TeV_Legacy2016_Collisions16_postVPF_JSON.txt
+Cert_271036-284044_13TeV_Legacy2016_Collisions16_preVPF_JSON.txt
+Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
+Cert_314472-325175_13TeV_Legacy2018_Collisions18_JSON.txt
+PSet.py
+PSet.pyc
+README.md
+__init__.py
+__init__.pyc
+auto_crab_example
+check_crab_status.py
+check_crab_status.pyc
+crab_script.py
+crab_script.pyc
+crab_script_data.sh
+crab_status.sh
+create_crab.py
+create_crab.pyc
+data_cfg.py
+data_cfg.pyc
+get_number_of_events_starting_from_das_name.py
+get_number_of_events_starting_from_das_name.pyc
+keep_and_drop.txt
+mc_cfg.py
+mc_cfg.pyc
+samples2016.json
+samples2016_signal.json
+samples2016apv.json
+samples2016apv_signal.json
+samples2017.json
+samples2017_signal.json
+samples2018.json
+samples2018_signal.json
+submit.sh
+submit_2018.sh
+submit_and_delete_unnecessary_files.py
+submit_and_delete_unnecessary_files.pyc
+[mguo@lxplus717 crab]$ python create_crab.py 2016
+[u'tZq', u'/tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ttWH', u'/TTWH_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'ZZ', u'']
+[u'tW', u'/ST_tW_top_5f_DS_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'WWZ_1', u'/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WWZ_2', u'/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1/NANOAODSIM']
+[u'ttWZ', u'/TTWZ_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WZ_EW', u'']
+[u'ttWW', u'/TTWW_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ttZ', u'/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WZZ_1', u'/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WJets', u'/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv9-20UL16JMENano_106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ttWLNu', u'/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WpWpJJ_EWK', u'/WpWpJJ_EWK_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'WZZ_2', u'/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1/NANOAODSIM']
+[u'WW_DPS', u'']
+[u'TTTo2L2Nu', u'/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'DYnlo', u'/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ttZtoQQ', u'/TTZToQQ_Dilept_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WZ_QCD', u'/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ZZ2L', u'/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'tbar_tch', u'/ST_t-channel_antitop_5f_InclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ttZH', u'/TTZH_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u't_sch', u'/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WpWpJJ_QCD', u'/WpWpJJ_QCD_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'WW_OS', u'/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u't_tch', u'/ST_t-channel_top_5f_InclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'tttt', u'/TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'DY', u'/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ZZJJTo4L', u'/ZZJJTo4L_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'ttHH', u'/TTHH_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'ttWtoQQ', u'/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WLLJJ', u'/WLLJJ_WToLNu_EWK_TuneCP5_13TeV_madgraph-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'ZZZ_2', u'/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1/NANOAODSIM']
+[u'ZZZ_1', u'/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'ssWW', u'']
+[u'tttJ', u'/TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'ttZZ', u'/TTZZ_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'WWW_2', u'/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1/NANOAODSIM']
+[u'WWW_1', u'/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'tttW', u'/TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'ttH', u'/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[u'TTTo1L', u'/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM']
+[u'tbarW', u'/ST_tW_antitop_5f_DS_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM']
+[mguo@lxplus717 crab]$ vi config_crab_2016/          
+DoubleEGF_cfg.py    SingleEGG_cfg.py    ssww_cfg.py         ttZH_cfg.py         wwz1_cfg.py
+DoubleEGG_cfg.py    SingleEGH_cfg.py    tW_cfg.py           ttZToQQ_cfg.py      wwz2_cfg.py
+DoubleEGH_cfg.py    SingleMuonF_cfg.py  t_sch_cfg.py        ttZZ_cfg.py         wz_ew_cfg.py
+DoubleMuonF_cfg.py  SingleMuonG_cfg.py  t_tch_cfg.py        ttZ_cfg.py          wz_qcd_cfg.py
+DoubleMuonG_cfg.py  SingleMuonH_cfg.py  tbarW_cfg.py        tttJ_cfg.py         wzz1_cfg.py
+DoubleMuonH_cfg.py  TTto1L_cfg.py       tbar_tch_cfg.py     tttW_cfg.py         wzz2_cfg.py
+METF_cfg.py         TTto2L_cfg.py       ttHH_cfg.py         tttt_cfg.py         zz2l_cfg.py
+METG_cfg.py         WLLJJ_cfg.py        ttH_cfg.py          tzq_cfg.py          zz_cfg.py
+METH_cfg.py         WpWpJJ_EWK_cfg.py   ttWH_cfg.py         wjet_cfg.py         zzz1_cfg.py
+MuonEGF_cfg.py      WpWpJJ_QCD_cfg.py   ttWToQQ_cfg.py      ww_cfg.py           zzz2_cfg.py
+MuonEGG_cfg.py      ZZJJTo4L_cfg.py     ttWW_cfg.py         ww_dps_cfg.py       
+MuonEGH_cfg.py      dy_cfg.py           ttWZ_cfg.py         www1_cfg.py         
+SingleEGF_cfg.py    dynlo_cfg.py        ttW_cfg.py          www2_cfg.py         
+[mguo@lxplus717 crab]$ vi config_crab_2016/t
+tW_cfg.py        tbar_tch_cfg.py  ttWToQQ_cfg.py   ttZH_cfg.py      tttJ_cfg.py      
+t_sch_cfg.py     ttHH_cfg.py      ttWW_cfg.py      ttZToQQ_cfg.py   tttW_cfg.py      
+t_tch_cfg.py     ttH_cfg.py       ttWZ_cfg.py      ttZZ_cfg.py      tttt_cfg.py      
+tbarW_cfg.py     ttWH_cfg.py      ttW_cfg.py       ttZ_cfg.py       tzq_cfg.py       
+[mguo@lxplus717 crab]$ vi config_crab_2016/t
+tW_cfg.py        tbar_tch_cfg.py  ttWToQQ_cfg.py   ttZH_cfg.py      tttJ_cfg.py      
+t_sch_cfg.py     ttHH_cfg.py      ttWW_cfg.py      ttZToQQ_cfg.py   tttW_cfg.py      
+t_tch_cfg.py     ttH_cfg.py       ttWZ_cfg.py      ttZZ_cfg.py      tttt_cfg.py      
+tbarW_cfg.py     ttWH_cfg.py      ttW_cfg.py       ttZ_cfg.py       tzq_cfg.py       
+[mguo@lxplus717 crab]$ vi config_crab_2016/tt
+ttHH_cfg.py     ttWToQQ_cfg.py  ttW_cfg.py      ttZZ_cfg.py     tttW_cfg.py     
+ttH_cfg.py      ttWW_cfg.py     ttZH_cfg.py     ttZ_cfg.py      tttt_cfg.py     
+ttWH_cfg.py     ttWZ_cfg.py     ttZToQQ_cfg.py  tttJ_cfg.py     
+[mguo@lxplus717 crab]$ vi config_crab_2016/tt
+ttHH_cfg.py     ttWToQQ_cfg.py  ttW_cfg.py      ttZZ_cfg.py     tttW_cfg.py     
+ttH_cfg.py      ttWW_cfg.py     ttZH_cfg.py     ttZ_cfg.py      tttt_cfg.py     
+ttWH_cfg.py     ttWZ_cfg.py     ttZToQQ_cfg.py  tttJ_cfg.py     
+[mguo@lxplus717 crab]$ vi config_crab_2016/ttHH_cfg.py 
+[mguo@lxplus717 crab]$ cd config_crab_2016/
+[mguo@lxplus717 config_crab_2016]$mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 guo@lxplus717 cguo@lxplus717 config_crab_2016]$ find . -type f -iname "*.py's#/store/group/phys
+[mguo@lxplus717 config_crab_2016]$ vi ttHH_cfg.py 
+[mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 config_cr[mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 mguo@lxplus717 cguo@lxplus717 cguo@lxplus717 cguo@lxplus717 config_crab_2016]$ find . -type f -inamH_CERNBOXe "*.py" -exec sed -i 's#T2_CH_CERN#T3_C#g
+[mguo@lxplus717 config_crab_2016]$ vi ttHH_cfg.py 
+[mguo@lxplus717 config_crab_2016]$ cd .
+[mguo@lxplus717 config_crab_2016]$ cd ..
+[mguo@lxplus717 crab]$ ..
+-bash: ..: command not found
+[mguo@lxplus717 crab]$ crab submit -c config_crab_2016/ttHH_cfg.py 
+Will use CRAB configuration file config_crab_2016/ttHH_cfg.py
+Importing CMSSW configuration PSet.py
+Finished importing CMSSW configuration PSet.py
+Sending the request to the server at cmsweb.cern.ch
+Success: Your task has been delivered to the prod CRAB3 server.
+Task name: 230322_075506:mguo_crab_ttHH
+Project dir: ./crab_ttHH
+Please use ' crab status -d ./crab_ttHH ' to check how the submission process proceeds.
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$ crab status -d ./crab_ttHH
+CRAB project directory:         /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH
+Task name:                      230322_075506:mguo_crab_ttHH
+Grid scheduler - Task Worker:   N/A yet - crab-prod-tw01
+Status on the CRAB server:      QUEUED on command SUBMIT
+Task URL to use for HELP:       https://cmsweb.cern.ch/crabserver/ui/task/230322_075506%3Amguo_crab_ttHH
+Dashboard monitoring URL:       https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mguo&var-task=230322_075506%3Amguo_crab_ttHH&from=1679468106000&to=now
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$ crab submit -c config_crab_2016/ttHH_cfg.py 
+Will use CRAB configuration file config_crab_2016/ttHH_cfg.py
+Working area '/eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH' already exists 
+Please change the requestName in the config file
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab.log
+[mguo@lxplus717 crab]$  crab status -d ./crab_ttHH
+CRAB project directory:         /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH
+Task name:                      230322_075506:mguo_crab_ttHH
+Grid scheduler - Task Worker:   crab3@vocms0155.cern.ch - crab-prod-tw01
+Status on the CRAB server:      SUBMITTED
+Task URL to use for HELP:       https://cmsweb.cern.ch/crabserver/ui/task/230322_075506%3Amguo_crab_ttHH
+Dashboard monitoring URL:       https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mguo&var-task=230322_075506%3Amguo_crab_ttHH&from=1679468106000&to=now
+Task bootstrapped at 2023-03-22 07:55:53 UTC. 63 seconds ago
+Status information will be available within a few minutes
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$  crab status -d ./crab_ttHH
+CRAB project directory:         /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH
+Task name:                      230322_075506:mguo_crab_ttHH
+Grid scheduler - Task Worker:   crab3@vocms0155.cern.ch - crab-prod-tw01
+Status on the CRAB server:      SUBMITTED
+Task URL to use for HELP:       https://cmsweb.cern.ch/crabserver/ui/task/230322_075506%3Amguo_crab_ttHH
+Dashboard monitoring URL:       https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mguo&var-task=230322_075506%3Amguo_crab_ttHH&from=1679468106000&to=now
+Status on the scheduler:        SUBMITTED
+
+Jobs status:                    idle                    100.0% (10/10)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$  crab status -d ./crab_ttHH
+CRAB project directory:         /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH
+Task name:                      230322_075506:mguo_crab_ttHH
+Grid scheduler - Task Worker:   crab3@vocms0155.cern.ch - crab-prod-tw01
+Status on the CRAB server:      SUBMITTED
+Task URL to use for HELP:       https://cmsweb.cern.ch/crabserver/ui/task/230322_075506%3Amguo_crab_ttHH
+Dashboard monitoring URL:       https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mguo&var-task=230322_075506%3Amguo_crab_ttHH&from=1679468106000&to=now
+Status on the scheduler:        SUBMITTED
+
+Jobs status:                    idle                    100.0% (10/10)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$  crab status -d ./crab_ttHH
+CRAB project directory:         /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH
+Task name:                      230322_075506:mguo_crab_ttHH
+Grid scheduler - Task Worker:   crab3@vocms0155.cern.ch - crab-prod-tw01
+Status on the CRAB server:      SUBMITTED
+Task URL to use for HELP:       https://cmsweb.cern.ch/crabserver/ui/task/230322_075506%3Amguo_crab_ttHH
+Dashboard monitoring URL:       https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mguo&var-task=230322_075506%3Amguo_crab_ttHH&from=1679468106000&to=now
+Status on the scheduler:        SUBMITTED
+
+Jobs status:                    idle                    100.0% (10/10)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$  crab status -d ./crab_ttHH
+CRAB project directory:         /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH
+Task name:                      230322_075506:mguo_crab_ttHH
+Grid scheduler - Task Worker:   crab3@vocms0155.cern.ch - crab-prod-tw01
+Status on the CRAB server:      SUBMITTED
+Task URL to use for HELP:       https://cmsweb.cern.ch/crabserver/ui/task/230322_075506%3Amguo_crab_ttHH
+Dashboard monitoring URL:       https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mguo&var-task=230322_075506%3Amguo_crab_ttHH&from=1679468106000&to=now
+Status on the scheduler:        SUBMITTED
+
+Jobs status:                    idle                    100.0% (10/10)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$ crab kill -d crab_
+crab_script.py       crab_script_data.sh  crab_ttHH/           
+crab_script.pyc      crab_status.sh       
+[mguo@lxplus717 crab]$ crab kill -d crab_ttHH/
+Kill request successfully sent
+Log file is /eos/home-m/mguo/CMSSW_10_6_29/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/crab/crab_ttHH/crab.log
+[mguo@lxplus717 crab]$ 

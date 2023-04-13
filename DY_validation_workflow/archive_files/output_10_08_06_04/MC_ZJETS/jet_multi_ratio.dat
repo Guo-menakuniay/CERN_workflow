@@ -1,0 +1,84 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+Title=Ratio of jet multiplicity
+XMajorTickMarks=10
+RatioPlot=1
+LogY=0
+RatioPlotYLabel=Ratio
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+XLabel=$N_{\text{jet}}$
+XMinorTickMarks=0
+YLabel=$\sigma(\geq N_{\text{jet}})/\sigma(\geq N_{\text{jet}}-1)$
+ErrorBands=1
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0008604981219095489, dn: 0.0008604981219095489}}, 1: {"": {up: 0.0007713314274883336, dn: 0.0007713314274883336}}, 2: {"": {up: 0.002164007682064075, dn: 0.002164007682064075}}, 3: {"": {up: 0.00709666574026629, dn: 0.00709666574026629}}, 4: {"": {up: 0.01720472018546888, dn: 0.01720472018546888}}, 5: {"": {up: 0, dn: 0}}}
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	3.606638e-01	8.604981e-04	8.604981e-04
+1.500000e+00	2.500000e+00	1.327319e-01	7.713314e-04	7.713314e-04
+2.500000e+00	3.500000e+00	1.179476e-01	2.164008e-03	2.164008e-03
+3.500000e+00	4.500000e+00	1.500539e-01	7.096666e-03	7.096666e-03
+4.500000e+00	5.500000e+00	1.502697e-01	1.720472e-02	1.720472e-02
+5.500000e+00	6.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0008611513995556441, dn: 0.0008611513995556441}}, 1: {"": {up: 0.0007635413528729745, dn: 0.0007635413528729745}}, 2: {"": {up: 0.002023289436592364, dn: 0.002023289436592364}}, 3: {"": {up: 0.006568269628105019, dn: 0.006568269628105019}}, 4: {"": {up: 0.01594747343845608, dn: 0.01594747343845608}}, 5: {"": {up: 0, dn: 0}}}
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	3.605071e-01	8.611514e-04	8.611514e-04
+1.500000e+00	2.500000e+00	1.315753e-01	7.635414e-04	7.635414e-04
+2.500000e+00	3.500000e+00	1.172198e-01	2.023289e-03	2.023289e-03
+3.500000e+00	4.500000e+00	1.450986e-01	6.568270e-03	6.568270e-03
+4.500000e+00	5.500000e+00	1.418070e-01	1.594747e-02	1.594747e-02
+5.500000e+00	6.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0008602053048655475, dn: 0.0008602053048655475}}, 1: {"": {up: 0.0007641911662327397, dn: 0.0007641911662327397}}, 2: {"": {up: 0.002037639960703644, dn: 0.002037639960703644}}, 3: {"": {up: 0.007109751152448871, dn: 0.007109751152448871}}, 4: {"": {up: 0.01556704403698583, dn: 0.01556704403698583}}, 5: {"": {up: 0, dn: 0}}}
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	3.606616e-01	8.602053e-04	8.602053e-04
+1.500000e+00	2.500000e+00	1.323820e-01	7.641912e-04	7.641912e-04
+2.500000e+00	3.500000e+00	1.179468e-01	2.037640e-03	2.037640e-03
+3.500000e+00	4.500000e+00	1.528919e-01	7.109751e-03	7.109751e-03
+4.500000e+00	5.500000e+00	1.240405e-01	1.556704e-02	1.556704e-02
+5.500000e+00	6.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0008568077996067018, dn: 0.0008568077996067018}}, 1: {"": {up: 0.0007571777468647956, dn: 0.0007571777468647956}}, 2: {"": {up: 0.002023159947769091, dn: 0.002023159947769091}}, 3: {"": {up: 0.007577346006057962, dn: 0.007577346006057962}}, 4: {"": {up: 0.01546478996811644, dn: 0.01546478996811644}}, 5: {"": {up: 0, dn: 0}}}
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ZJETS:ENERGY=13000/jet_multi_ratio
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	3.603137e-01	8.568078e-04	8.568078e-04
+1.500000e+00	2.500000e+00	1.329110e-01	7.571777e-04	7.571777e-04
+2.500000e+00	3.500000e+00	1.167987e-01	2.023160e-03	2.023160e-03
+3.500000e+00	4.500000e+00	1.575337e-01	7.577346e-03	7.577346e-03
+4.500000e+00	5.500000e+00	1.341097e-01	1.546479e-02	1.546479e-02
+5.500000e+00	6.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+

@@ -1,0 +1,74 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/CMS_2020_I1837084/d13-x01-y01 //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/CMS_2020_I1837084/d13-x01-y01 //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/CMS_2020_I1837084/d13-x01-y01 //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/CMS_2020_I1837084/d13-x01-y01 //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/CMS_2020_I1837084/d13-x01-y01 //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/CMS_2020_I1837084/d13-x01-y01 //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/CMS_2020_I1837084/d13-x01-y01
+RatioPlot=1
+LogY=1
+RatioPlotYLabel=Ratio
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/CMS_2020_I1837084/d13-x01-y01
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/CMS_2020_I1837084/d13-x01-y01
+ScaledBy=1.25465208439169519e-08
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+2.000000e+02	3.000000e+02	8.410066e-01	2.038954e-02	2.038954e-02
+3.000000e+02	4.000000e+02	1.163881e-01	7.803896e-03	7.803896e-03
+4.000000e+02	5.000000e+02	2.944036e-02	3.554634e-03	3.554634e-03
+5.000000e+02	8.000000e+02	1.301347e-02	2.346065e-03	2.346065e-03
+8.000000e+02	1.500000e+03	1.514200e-04	1.514200e-04	1.514200e-04
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+ScaledBy=1.20916750935129525e-08
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+2.000000e+02	3.000000e+02	8.449352e-01	2.047305e-02	2.047305e-02
+3.000000e+02	4.000000e+02	1.151171e-01	6.967565e-03	6.967565e-03
+4.000000e+02	5.000000e+02	2.824514e-02	3.480944e-03	3.480944e-03
+5.000000e+02	8.000000e+02	1.127898e-02	2.591516e-03	2.591516e-03
+8.000000e+02	1.500000e+03	4.235589e-04	4.235590e-04	4.235590e-04
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+ScaledBy=1.21946919522384066e-08
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+2.000000e+02	3.000000e+02	8.351030e-01	2.036671e-02	2.036671e-02
+3.000000e+02	4.000000e+02	1.268869e-01	7.597833e-03	7.597833e-03
+4.000000e+02	5.000000e+02	2.751285e-02	3.474743e-03	3.474743e-03
+5.000000e+02	8.000000e+02	1.028572e-02	1.813820e-03	1.813820e-03
+8.000000e+02	1.500000e+03	2.115254e-04	2.115255e-04	2.115255e-04
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+ErrorBars=1
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/CMS_2020_I1837084/d13-x01-y01
+ScaledBy=1.27190625308986399e-08
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+2.000000e+02	3.000000e+02	8.472644e-01	2.005620e-02	2.005620e-02
+3.000000e+02	4.000000e+02	1.220238e-01	8.032241e-03	8.032241e-03
+4.000000e+02	5.000000e+02	1.754106e-02	2.843374e-03	2.843374e-03
+5.000000e+02	8.000000e+02	1.173971e-02	2.087433e-03	2.087433e-03
+8.000000e+02	1.500000e+03	1.430996e-03	6.927536e-04	6.927536e-04
+# END HISTO1D
+

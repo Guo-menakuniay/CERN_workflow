@@ -1,0 +1,80 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+Title=Exclusive electron multiplicity
+XMajorTickMarks=10
+RatioPlot=1
+LogY=1
+RatioPlotYLabel=Ratio
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ErrorBands=1
+XMinorTickMarks=0
+YLabel=$\sigma(N_{\text{electron}})$ [pb]
+XLabel=$N_{\text{electron}}$
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ScaledBy=1.89456232743179515e-08
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	2.769670e+03	1.454247e+00	1.454247e+00
+5.000000e-01	1.500000e+00	8.968502e+02	8.659853e-01	8.659853e-01
+1.500000e+00	2.500000e+00	1.875067e+03	1.208055e+00	1.208055e+00
+2.500000e+00	3.500000e+00	2.927799e+02	5.227755e-01	5.227755e-01
+3.500000e+00	4.500000e+00	6.310820e+01	2.478735e-01	2.478735e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ScaledBy=1.89332628314915494e-08
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	2.770564e+03	1.454469e+00	1.454469e+00
+5.000000e-01	1.500000e+00	8.974728e+02	8.643734e-01	8.643734e-01
+1.500000e+00	2.500000e+00	1.875055e+03	1.209956e+00	1.209956e+00
+2.500000e+00	3.500000e+00	2.941269e+02	5.224630e-01	5.224630e-01
+3.500000e+00	4.500000e+00	6.311238e+01	2.469919e-01	2.469919e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ScaledBy=1.89715038645458132e-08
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	2.767174e+03	1.454911e+00	1.454911e+00
+5.000000e-01	1.500000e+00	8.994542e+02	8.659064e-01	8.659064e-01
+1.500000e+00	2.500000e+00	1.874628e+03	1.210740e+00	1.210740e+00
+2.500000e+00	3.500000e+00	2.935590e+02	5.225425e-01	5.225425e-01
+3.500000e+00	4.500000e+00	6.279651e+01	2.435845e-01	2.435845e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ErrorBars=1
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_ELECTRONS:ENERGY=13000/electron_multi_exclusive
+ScaledBy=1.89334257551278654e-08
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	2.771377e+03	1.455476e+00	1.455476e+00
+5.000000e-01	1.500000e+00	8.964253e+02	8.694017e-01	8.694017e-01
+1.500000e+00	2.500000e+00	1.873946e+03	1.205735e+00	1.205735e+00
+2.500000e+00	3.500000e+00	2.932024e+02	5.195080e-01	5.195080e-01
+3.500000e+00	4.500000e+00	6.291786e+01	2.462748e-01	2.462748e-01
+# END HISTO1D
+

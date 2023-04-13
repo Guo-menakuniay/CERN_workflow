@@ -1,0 +1,76 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+Title=Ratio of muon multiplicity
+XMajorTickMarks=10
+RatioPlot=1
+LogY=0
+RatioPlotYLabel=Ratio
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+XLabel=$N_{\text{muon}}$
+XMinorTickMarks=0
+YLabel=$\sigma(\geq N_{\text{muon}})/\sigma(\geq N_{\text{muon}}-1)$
+ErrorBands=1
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0004267100999321766, dn: 0.0004267100999321766}}, 1: {"": {up: 0.0008618849171491506, dn: 0.0008618849171491506}}, 2: {"": {up: 0.000217302149148272, dn: 0.000217302149148272}}, 3: {"": {up: 0, dn: 0}}}
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	4.726851e-01	4.267101e-04	4.267101e-04
+1.500000e+00	2.500000e+00	7.459530e-01	8.618849e-04	8.618849e-04
+2.500000e+00	3.500000e+00	6.414769e-02	2.173021e-04	2.173021e-04
+3.500000e+00	4.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0004267295303333666, dn: 0.0004267295303333666}}, 1: {"": {up: 0.0008614165909744038, dn: 0.0008614165909744038}}, 2: {"": {up: 0.0002144138327096055, dn: 0.0002144138327096055}}, 3: {"": {up: 0, dn: 0}}}
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	4.727482e-01	4.267295e-04	4.267295e-04
+1.500000e+00	2.500000e+00	7.457864e-01	8.614166e-04	8.614166e-04
+2.500000e+00	3.500000e+00	6.424151e-02	2.144138e-04	2.144138e-04
+3.500000e+00	4.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0004273911946919481, dn: 0.0004273911946919481}}, 1: {"": {up: 0.0008632421572301443, dn: 0.0008632421572301443}}, 2: {"": {up: 0.0002172444229181259, dn: 0.0002172444229181259}}, 3: {"": {up: 0, dn: 0}}}
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	4.727646e-01	4.273912e-04	4.273912e-04
+1.500000e+00	2.500000e+00	7.458304e-01	8.632422e-04	8.632422e-04
+2.500000e+00	3.500000e+00	6.461635e-02	2.172444e-04	2.172444e-04
+3.500000e+00	4.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+ErrorBars=1
+ErrorBreakdown={0: {"": {up: 0.0004274080454030435, dn: 0.0004274080454030435}}, 1: {"": {up: 0.0008631182727910845, dn: 0.0008631182727910845}}, 2: {"": {up: 0.0002150966315865951, dn: 0.0002150966315865951}}, 3: {"": {up: 0, dn: 0}}}
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_ratio
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+5.000000e-01	1.500000e+00	4.732064e-01	4.274080e-04	4.274080e-04
+1.500000e+00	2.500000e+00	7.462464e-01	8.631183e-04	8.631183e-04
+2.500000e+00	3.500000e+00	6.410211e-02	2.150966e-04	2.150966e-04
+3.500000e+00	4.500000e+00	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+

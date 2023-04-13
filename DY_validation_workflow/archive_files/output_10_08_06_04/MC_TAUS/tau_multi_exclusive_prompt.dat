@@ -1,0 +1,80 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+Title=Exclusive tau multiplicity
+XMajorTickMarks=10
+RatioPlot=1
+LogY=1
+RatioPlotYLabel=Ratio
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ErrorBands=1
+XMinorTickMarks=0
+YLabel=$\sigma(N_{\text{tau}})$ [pb]
+XLabel=$N_{\text{tau}}$
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ScaledBy=1.89456232743179515e-08
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.940349e+03	1.764594e+00	1.764594e+00
+5.000000e-01	1.500000e+00	4.424640e-01	2.446524e-02	2.446524e-02
+1.500000e+00	2.500000e+00	1.967747e+03	1.247493e+00	1.247493e+00
+2.500000e+00	3.500000e+00	9.793633e-04	6.304630e-04	6.304630e-04
+3.500000e+00	4.500000e+00	5.927167e-02	6.247853e-03	6.247853e-03
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ScaledBy=1.89332628314915494e-08
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.942701e+03	1.766459e+00	1.766459e+00
+5.000000e-01	1.500000e+00	4.683741e-01	2.237900e-02	2.237900e-02
+1.500000e+00	2.500000e+00	1.968263e+03	1.245498e+00	1.245498e+00
+2.500000e+00	3.500000e+00	1.909066e-03	9.881825e-04	9.881825e-04
+3.500000e+00	4.500000e+00	7.301744e-02	7.490449e-03	7.490449e-03
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ScaledBy=1.89715038645458132e-08
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.940130e+03	1.768440e+00	1.768440e+00
+5.000000e-01	1.500000e+00	4.077461e-01	2.147996e-02	2.147996e-02
+1.500000e+00	2.500000e+00	1.968015e+03	1.244415e+00	1.244415e+00
+2.500000e+00	3.500000e+00	2.164421e-03	7.526303e-04	7.526303e-04
+3.500000e+00	4.500000e+00	7.305318e-02	6.677042e-03	6.677042e-03
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ErrorBars=1
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_TAUS:ENERGY=13000/tau_multi_exclusive_prompt
+ScaledBy=1.89334257551278654e-08
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.942335e+03	1.764971e+00	1.764971e+00
+5.000000e-01	1.500000e+00	4.010884e-01	1.990086e-02	1.990086e-02
+1.500000e+00	2.500000e+00	1.966175e+03	1.246655e+00	1.246655e+00
+2.500000e+00	3.500000e+00	3.150303e-03	1.068728e-03	1.068728e-03
+3.500000e+00	4.500000e+00	5.257386e-02	5.794276e-03	5.794276e-03
+# END HISTO1D
+

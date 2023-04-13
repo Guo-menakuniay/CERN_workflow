@@ -1,0 +1,71 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_XS:ENERGY=13000/pmXS //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_XS:ENERGY=13000/pmXS //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_XS:ENERGY=13000/pmXS //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_XS:ENERGY=13000/pmXS
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_XS:ENERGY=13000/pmXS //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_XS:ENERGY=13000/pmXS //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_XS:ENERGY=13000/pmXS //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_XS:ENERGY=13000/pmXS
+XCustomMajorTicks=-0.5	$w<0$	0.5	$w\geq0$
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_XS:ENERGY=13000/pmXS
+Title=Fraction of positive and negative weighted events
+RatioPlot=1
+LogY=0
+RatioPlotYLabel=Ratio
+LegendXPos=0.05
+XLabel=$\text{sgn}(w)$
+ShowZero=0
+XMax=1
+YLabel=$\text{d}\sigma/\text{d sgn}(w)$ [pb]
+XMin=-1
+XMinorTickMarks=0
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_XS:ENERGY=13000/pmXS
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_XS:ENERGY=13000/pmXS
+ScaledBy=1.89456232743179515e-08
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+-1.000000e+00	0.000000e+00	9.047693e+02	7.445303e-01	7.445303e-01
+0.000000e+00	1.000000e+00	6.813367e+03	2.028877e+00	2.028877e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_XS:ENERGY=13000/pmXS
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_XS:ENERGY=13000/pmXS
+ScaledBy=1.89332628314915494e-08
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+-1.000000e+00	0.000000e+00	9.025665e+02	7.431721e-01	7.431721e-01
+0.000000e+00	1.000000e+00	6.814074e+03	2.029753e+00	2.029753e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_XS:ENERGY=13000/pmXS
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_XS:ENERGY=13000/pmXS
+ScaledBy=1.89715038645458132e-08
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+-1.000000e+00	0.000000e+00	9.036149e+02	7.471525e-01	7.471525e-01
+0.000000e+00	1.000000e+00	6.812242e+03	2.029339e+00	2.029339e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_XS:ENERGY=13000/pmXS
+ErrorBars=1
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_XS:ENERGY=13000/pmXS
+ScaledBy=1.89334257551278654e-08
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+-1.000000e+00	0.000000e+00	9.041186e+02	7.438118e-01	7.438118e-01
+0.000000e+00	1.000000e+00	6.813085e+03	2.028902e+00	2.028902e+00
+# END HISTO1D
+

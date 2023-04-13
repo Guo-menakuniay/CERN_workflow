@@ -1,0 +1,80 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+DrawOnly=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+Title=Exclusive muon multiplicity
+XMajorTickMarks=10
+RatioPlot=1
+LogY=1
+RatioPlotYLabel=Ratio
+RatioPlotReference=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ErrorBands=1
+XMinorTickMarks=0
+YLabel=$\sigma(N_{\text{muon}})$ [pb]
+XLabel=$N_{\text{muon}}$
+Legend=1
+RemoveOptions=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run10/run10.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ScaledBy=1.89456232743179515e-08
+Title=Run10
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.115692e+03	1.556135e+00	1.556135e+00
+5.000000e-01	1.500000e+00	7.095294e+02	7.674605e-01	7.674605e-01
+1.500000e+00	2.500000e+00	1.949733e+03	1.234165e+00	1.234165e+00
+2.500000e+00	3.500000e+00	1.199747e+02	3.500359e-01	3.500359e-01
+3.500000e+00	4.500000e+00	1.266050e+01	1.154201e-01	1.154201e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run08/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ScaledBy=1.89332628314915494e-08
+Title=Run08
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.116853e+03	1.555614e+00	1.555614e+00
+5.000000e-01	1.500000e+00	7.104391e+02	7.700790e-01	7.700790e-01
+1.500000e+00	2.500000e+00	1.950322e+03	1.235578e+00	1.235578e+00
+2.500000e+00	3.500000e+00	1.201808e+02	3.439852e-01	3.439852e-01
+3.500000e+00	4.500000e+00	1.269132e+01	1.144700e-01	1.144700e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run06/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ScaledBy=1.89715038645458132e-08
+Title=Run06
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.115237e+03	1.554874e+00	1.554874e+00
+5.000000e-01	1.500000e+00	7.099948e+02	7.704504e-01	7.704504e-01
+1.500000e+00	2.500000e+00	1.948774e+03	1.236487e+00	1.236487e+00
+2.500000e+00	3.500000e+00	1.205076e+02	3.476924e-01	3.476924e-01
+3.500000e+00	4.500000e+00	1.313864e+01	1.195535e-01	1.195535e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ErrorBars=1
+LineColor=orange
+LineStyle=solid
+Path=//eos/home-m/mguo/Yodafiles/Run04/merged.yoda/MC_MUONS:ENERGY=13000/muon_multi_exclusive
+ScaledBy=1.89334257551278654e-08
+Title=Run04
+# xlow	 xhigh	 val	 errminus	 errplus
+-5.000000e-01	5.000000e-01	3.112806e+03	1.552674e+00	1.552674e+00
+5.000000e-01	1.500000e+00	7.095358e+02	7.681570e-01	7.681570e-01
+1.500000e+00	2.500000e+00	1.952868e+03	1.238899e+00	1.238899e+00
+2.500000e+00	3.500000e+00	1.200561e+02	3.458023e-01	3.458023e-01
+3.500000e+00	4.500000e+00	1.268893e+01	1.149626e-01	1.149626e-01
+# END HISTO1D
+
